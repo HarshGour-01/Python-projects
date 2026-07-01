@@ -6,10 +6,13 @@ Play And FUN
 import random
 
 rand = random.randint(1,100)
+attempts = 0
 while True:
+
     user = input("Enter a number between 1 to 100: ")
     user_input = int(user)
-
+    attempts += 1
+    
     if(user_input < 1 or user_input > 100) :
         print("Invalid Number ! Enter a number between 1 and 100.")
     
@@ -23,4 +26,6 @@ while True:
         print("\033[96m🏆VICTORY🏆 YOU WIN GAME.\033")
         print("YOUR NICE PERFORMATION.")
         print(f"Computer Number : {rand}")
+        
+        print((f"Total Attempts : {attempts}"))
         break
